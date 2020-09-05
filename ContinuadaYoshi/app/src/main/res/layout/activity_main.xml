@@ -9,10 +9,169 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/tv_title"
+        android:text="Cálculo de média do aluno"
+        android:textSize="30sp"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toTopOf="@id/tv_nome"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_nome"
+        android:text="Nome do aluno"
+        android:textSize="20sp"
+        android:textColor="#000000"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintTop_toBottomOf="@id/tv_title"
+        app:layout_constraintLeft_toLeftOf="@id/tv_title"
+        app:layout_constraintRight_toRightOf="@id/tv_title"
+        app:layout_constraintBottom_toTopOf="@id/et_nome"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_nome"
+        android:hint="Digite o nome do aluno"
+        android:textSize="15sp"
+        android:inputType="text"
+        android:importantForAutofill="no"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_nome"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/tv_1bimestre"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_1bimestre"
+        android:text="Nota 1º bimestre"
+        android:textSize="20sp"
+        android:textColor="#000000"
+        app:layout_constraintTop_toBottomOf="@id/et_nome"
+        app:layout_constraintLeft_toLeftOf="@id/tv_title"
+        app:layout_constraintBottom_toTopOf="@id/et_1bimestre"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_1bimestre"
+        android:hint="Digite a nota"
+        android:textSize="15sp"
+        android:inputType="numberDecimal"
+        android:importantForAutofill="no"
+        app:layout_constraintTop_toBottomOf="@id/tv_1bimestre"
+        app:layout_constraintLeft_toLeftOf="@id/tv_1bimestre"
+        app:layout_constraintRight_toRightOf="@id/tv_1bimestre"
+        app:layout_constraintBottom_toTopOf="@id/tv_3bimestre"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_2bimestre"
+        android:text="Nota 2º bimestre"
+        android:textSize="20sp"
+        android:textColor="#000000"
+        app:layout_constraintTop_toBottomOf="@id/et_nome"
+        app:layout_constraintRight_toRightOf="@id/tv_title"
+        app:layout_constraintBottom_toTopOf="@id/et_2bimestre"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_2bimestre"
+        android:hint="Digite a nota"
+        android:textSize="15sp"
+        android:inputType="numberDecimal"
+        android:importantForAutofill="no"
+        app:layout_constraintTop_toBottomOf="@id/tv_2bimestre"
+        app:layout_constraintLeft_toLeftOf="@id/tv_2bimestre"
+        app:layout_constraintRight_toRightOf="@id/tv_2bimestre"
+        app:layout_constraintBottom_toTopOf="@id/tv_4bimestre"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_3bimestre"
+        android:text="Nota 3º bimestre"
+        android:textSize="20sp"
+        android:textColor="#000000"
+        app:layout_constraintTop_toBottomOf="@id/et_2bimestre"
+        app:layout_constraintLeft_toLeftOf="@id/tv_1bimestre"
+        app:layout_constraintRight_toRightOf="@id/tv_1bimestre"
+        app:layout_constraintBottom_toTopOf="@id/et_3bimestre"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_3bimestre"
+        android:hint="Digite a nota"
+        android:textSize="15sp"
+        android:inputType="numberDecimal"
+        android:importantForAutofill="no"
+        app:layout_constraintTop_toBottomOf="@id/tv_3bimestre"
+        app:layout_constraintLeft_toLeftOf="@id/tv_3bimestre"
+        app:layout_constraintRight_toRightOf="@id/tv_3bimestre"
+        app:layout_constraintBottom_toTopOf="@id/bt_calcular"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_4bimestre"
+        android:text="Nota 4º bimestre"
+        android:textSize="20sp"
+        android:textColor="#000000"
+        app:layout_constraintTop_toBottomOf="@id/et_2bimestre"
+        app:layout_constraintLeft_toLeftOf="@id/tv_2bimestre"
+        app:layout_constraintRight_toRightOf="@id/tv_2bimestre"
+        app:layout_constraintBottom_toTopOf="@id/et_4bimestre"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_4bimestre"
+        android:hint="Digite a nota"
+        android:textSize="15sp"
+        android:inputType="numberDecimal"
+        android:importantForAutofill="no"
+        app:layout_constraintTop_toBottomOf="@id/tv_4bimestre"
+        app:layout_constraintLeft_toLeftOf="@id/tv_4bimestre"
+        app:layout_constraintRight_toRightOf="@id/tv_4bimestre"
+        app:layout_constraintBottom_toTopOf="@id/bt_calcular"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bt_calcular"
+        android:text="Calcular média"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginVertical="60dp"
+        app:layout_constraintLeft_toLeftOf="@id/tv_title"
+        app:layout_constraintRight_toRightOf="@id/tv_title"
+        app:layout_constraintBottom_toTopOf="@id/tv_resultado"
+        android:onClick="calcular"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_resultado"
+        android:text="Resultado"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:visibility="invisible"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="100dp"
+        app:layout_constraintLeft_toLeftOf="@id/bt_calcular"
+        app:layout_constraintRight_toRightOf="@id/bt_calcular"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
